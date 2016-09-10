@@ -22,6 +22,9 @@ public class Main {
 		uploader.setPort(21);
 		uploader.setUser("u326125313");
 		uploader.setPass("hostinger159753");
+		uploader.setLocalDirPath("D:/java/FbRest/content");
+		
+		uploader.run();
 		
 	}
 

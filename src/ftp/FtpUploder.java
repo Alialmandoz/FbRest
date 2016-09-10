@@ -16,10 +16,36 @@ public class FtpUploder implements Runnable{
 	private int port;
 	private String user;
 	private String pass;
+	private String remoteDirPath = "/public_html";
+	private String localDirPath;
     
     
  
-    public String getServer() {
+    public String getRemoteDirPath() {
+		return remoteDirPath;
+	}
+
+
+
+	public void setRemoteDirPath(String remoteDirPath) {
+		this.remoteDirPath = remoteDirPath;
+	}
+
+
+
+	public String getLocalDirPath() {
+		return localDirPath;
+	}
+
+
+
+	public void setLocalDirPath(String localDirPath) {
+		this.localDirPath = localDirPath;
+	}
+
+
+
+	public String getServer() {
 		return server;
 	}
 
@@ -82,10 +108,8 @@ public class FtpUploder implements Runnable{
  
             System.out.println("Connected");
  
-            String remoteDirPath = "/public_html";
-            String localDirPath = "D:/Java/arch";
- 
             Ftp.uploadDirectory(ftpClient, remoteDirPath, localDirPath, "");
+
  
             // log out and disconnect from the server
             ftpClient.logout();

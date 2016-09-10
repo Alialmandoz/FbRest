@@ -5,6 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import freemarker.template.Configuration;
@@ -61,7 +64,10 @@ public class HtmlGenerator {
 
 
 
-	public String getPhotoFolder() {
+	public String getPhotoFolder() throws IOException {
+		Path source = Paths.get(photoFolder);
+		Path newdir = Paths.get("D:/java/FbRest/content");
+		Files.copy(source, newdir.resolve(source.getFileName()));
 		return photoFolder;
 	}
 
