@@ -15,7 +15,7 @@ public class FbPublisher {
 
 
 	@SuppressWarnings("deprecation")
-	public static void publishPotho(File photo,String message) {
+	public static void publishPhoto(File photo,String message) {
 		InputStream is = null;
 		try {
 			is = new FileInputStream(photo);

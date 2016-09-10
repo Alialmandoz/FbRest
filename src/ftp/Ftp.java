@@ -9,7 +9,7 @@ import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 
 
-public class FtpUploader {
+public class Ftp {
 	/**
 	 * Upload a whole directory (including its nested sub directories and files)
 	 * to a FTP server.

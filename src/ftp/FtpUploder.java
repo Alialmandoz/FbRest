@@ -10,13 +10,65 @@ import org.apache.commons.net.ftp.FTPClient;
  * @author www.codejava.net
  *
  */
-public class FTPUploadDirectoryTest {
+public class FtpUploder implements Runnable{
+
+	private String server;
+	private int port;
+	private String user;
+	private String pass;
+    
+    
  
-    public static void main(String[] args) {
-        String server = "ftp.alialmandoz.hol.es";
-        int port = 21;
-        String user = "u326125313";
-        String pass = "hostinger159753";
+    public String getServer() {
+		return server;
+	}
+
+
+
+	public void setServer(String server) {
+		this.server = server;
+	}
+
+
+
+	public int getPort() {
+		return port;
+	}
+
+
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+
+
+	public String getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+
+
+	public String getPass() {
+		return pass;
+	}
+
+
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+
+
+	public void run() {
+        
  
         FTPClient ftpClient = new FTPClient();
  
@@ -33,7 +85,7 @@ public class FTPUploadDirectoryTest {
             String remoteDirPath = "/public_html";
             String localDirPath = "D:/Java/arch";
  
-            FtpUploader.uploadDirectory(ftpClient, remoteDirPath, localDirPath, "");
+            Ftp.uploadDirectory(ftpClient, remoteDirPath, localDirPath, "");
  
             // log out and disconnect from the server
             ftpClient.logout();

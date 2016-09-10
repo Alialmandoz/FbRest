@@ -117,12 +117,7 @@ public class HtmlGenerator {
 
 			// Instantiate template
 			Template template = cfg.getTemplate("template.ftl");
-
-			// Console output
-			Writer console = new OutputStreamWriter(System.out);
-			template.process(map, console);
-			console.flush();
-
+			
 			// File output
 			Writer file = new FileWriter(new File("D:/Java/FbRest/content/post_"+title+".html"));
 			template.process(map, file);

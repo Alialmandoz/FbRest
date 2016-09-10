@@ -14,12 +14,12 @@
         </div>
         
         <div>
-        <img src="${image}" alt="${altText}" class ="imagen">
-         <p>"${content}"</p>
+        <img class ="imagen" src="${image}" alt="${altText}">
+         <p>"${message}"</p>
         </div>
         
         <div>
-        <p>"${message}"<p>
+        <p>"${content}"<p>
         </div>
           
         <div id="footer">

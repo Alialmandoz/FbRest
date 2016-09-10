@@ -1,1 +1,7 @@
 http://www.codejava.net/java-se/networking/ftp/how-to-upload-a-directory-to-a-ftp-server
+
+	String server = "ftp.alialmandoz.hol.es";
+    int port = 21;
+    String user = "u326125313";
+    String pass = "hostinger159753";
+ 
