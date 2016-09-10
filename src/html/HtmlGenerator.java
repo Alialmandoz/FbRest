@@ -101,15 +101,15 @@ public class HtmlGenerator {
 		try {
 			// Instantiate Configuration class
 			Configuration cfg = new Configuration(Configuration.VERSION_2_3_23);
-			cfg.setDirectoryForTemplateLoading(new File("/FbRest/src/html/template"));
+			cfg.setDirectoryForTemplateLoading(new File("D:/java/FbRest/content"));
 			cfg.setDefaultEncoding("UTF-8");
 			cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
 
 			// Create Data Model
 			Map<String, Object> map = new HashMap<>();
-			map.put("style", "FbRest/upload_content/css/style.css");
-			map.put("blogTitle", getTitle());
-			map.put("alt",getAltText());
+			map.put("style", "D:/java/FbRest/upload_content/css/style.css");
+			map.put("title", getTitle());
+			map.put("altText",getAltText());
 			map.put("message", getPhotoMessege());
 			map.put("image", getPhotoFolder());
 			map.put("content", getContent());

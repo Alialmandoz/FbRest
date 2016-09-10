@@ -14,7 +14,7 @@
         </div>
         
         <div>
-        <img src="${image}}" alt="${altText}" class ="imagen">
+        <img src="${image}" alt="${altText}" class ="imagen">
          <p>"${content}"</p>
         </div>
         

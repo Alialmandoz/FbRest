@@ -13,7 +13,7 @@ public class Main {
 		generator.setAltText("hola Mundo");
 		generator.setFooter("este es el footer");
 		generator.setPhotoMessege("hola mundo");
-		
+		generator.generate();
 	}
 
 }
